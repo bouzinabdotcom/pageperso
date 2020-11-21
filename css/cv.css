@@ -1,0 +1,106 @@
+.cols-comp {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+}
+
+.cols-xp, .cols-fo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.cols-la {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.cols-la > * {
+    margin: 0 auto;
+}
+
+.col1 {
+    grid-column: 1;
+}
+.col2 {
+    grid-column: 2;
+}
+.col3 {
+    grid-column: 3;
+}
+.col4 {
+    grid-column: 4;
+}
+
+.main h1 {
+    border-bottom: 2px solid black;
+}
+
+.niveau {
+    margin:5px;
+    background-color: lightgrey;
+    height: 10px;
+    width: 100px;
+    border-radius: 5px;
+}
+
+.niveau::after {
+    background-color: black;
+    height: 10px;
+    width: 100px;
+    position: absolute;
+    border-radius: 5px;
+    content: ' ';
+    display: inline-block;
+
+    /* height: 10px;
+    width: 100px;
+    border-radius: 5px; */
+}
+
+.fr .niveau::after {
+    width: 70px;
+}
+
+.en .niveau::after {
+    width: 80px;
+}
+.ar .niveau::after {
+    width: 90px;
+}
+.es .niveau::after {
+    width: 30px;
+}
+
+
+.competences ul, .xp ul {
+    list-style: circle;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.cols-xp > div, .cols-fo > div, .cols-comp > div, .projets > div {
+    padding: 10px
+}
+
+.projets a {
+    color: black
+}
+
+.telechargement {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.telechargement a {
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 10px 30px;
+    
+}
+
+@media(max-width: 800px) {
+    .cols-xp, .cols-fo, .cols-comp, .cols-la{
+        display: block;
+    }
+}

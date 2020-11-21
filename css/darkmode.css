@@ -1,0 +1,33 @@
+html {
+    background-color:rgb(20, 20, 20);
+}
+
+body {
+    background-color: rgb(50, 50, 50);
+    color: white;
+}
+body a {
+    color : white;
+}
+
+nav ul li a {
+    color: white;   
+}
+
+#darkmode {
+    color: black;
+    background-color: white;
+    padding: 10px;
+    border: 0;
+    position: fixed;
+    z-index: 999;
+    top: 10px;
+    left: 10px;
+}
+
+@media(max-width: 1000px) {
+    html {
+        background-color: rgb(50, 50, 50);
+    }
+
+}

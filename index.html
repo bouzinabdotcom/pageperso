@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style-default.css">
+    <link rel="stylesheet" href="css/index.css">
+    
+
+    <title>Omar Bouzinab</title>
+</head>
+<body>
+    <header>
+        <h1><span>BOUZINAB</span> OMAR</h1>
+        <h4>Étudiant Ingenieur</h4>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#" class="active">Acceuil</a></li>
+            <li><a href="livre-d-or.html">Livre d'or</a></li>
+            <li><a href="cv.html">Curriculum Vitae</a></li>
+            <li><a href="liens.html">Liens</a></li>
+        </ul>
+    </nav>
+    <div class="main">
+        <div class="intro">
+            <h1>Introduction</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut rem harum delectus expedita quasi sit minima ullam omnis, ipsam error perferendis corrupti impedit sapiente nam corporis nulla voluptatem at fugiat ea? Laboriosam tempora, accusantium illum voluptas incidunt corrupti mollitia eveniet porro veniam amet doloribus inventore commodi quibusdam tenetur ducimus error excepturi repellendus fuga quis culpa placeat nisi magnam nesciunt aliquam? Beatae, culpa. Possimus optio eveniet, tenetur ipsam debitis similique soluta hic minima, dolore corrupti maxime mollitia dolorem! Aspernatur quas illo quidem ut eligendi sint, nobis fuga voluptates neque id doloribus amet, quod cum quam ad labore exercitationem ratione? Maiores, praesentium!</p>
+        </div>
+        <div class="interests">
+            <h1>Intérêts</h1>
+            <ul>
+                <li>
+                    <h2>Interest1</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, pariatur nihil asperiores ut optio quaerat quod beatae vero corporis adipisci modi illo nisi dicta in facere quis excepturi molestias enim?</p>
+                </li>
+                <li>
+                    <h2>Interest2</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, pariatur nihil asperiores ut optio quaerat quod beatae vero corporis adipisci modi illo nisi dicta in facere quis excepturi molestias enim?</p>
+                </li>
+                <li>
+                    <h2>Interest3</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, pariatur nihil asperiores ut optio quaerat quod beatae vero corporis adipisci modi illo nisi dicta in facere quis excepturi molestias enim?</p>
+                </li>
+                <li>
+                    <h2>Interest4</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, pariatur nihil asperiores ut optio quaerat quod beatae vero corporis adipisci modi illo nisi dicta in facere quis excepturi molestias enim?</p>
+                </li>
+            </ul>
+        </div>
+        <div class="apropos">
+            <h1>À propos de cette page</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis provident, nesciunt quod aut odit et quidem voluptatibus aspernatur necessitatibus facilis saepe? Tempora facere nostrum ad quasi, hic quos! Doloribus, consequatur.</p>
+        </div>
+        <div class="rapports">
+            <h1>Rapports</h1>
+            <p><a href="pdf/rapport-js.pdf">Utilisation de JavaScript pour la partie vérification de formulaire, changement de feuille de style et gestion des cookies</a></p>
+            <p><a href="pdf/rapport-linux.pdf">Les différentes commandes Linux utilisées lors de l’initiation à Linux</a></p>
+        </div>
+    </div>
+    <footer>© BOUZINAB Omar 2020</footer>
+
+    <div class="cookies-consent" id="cookie">
+        <p>We use cookies to improve user experience. By clicking “Accept Cookies”, you consent to store cookies on your device. 
+        <button onclick="handleCookieConsent()">Accept Cookies</button></p>
+        <script src="js/cookies.js"></script>
+    </div>
+
+    <button id="darkmode" onclick="toggleDarkMode()">Dark Mode</button>
+    <script src="js/darkmode.js"></script>
+
+    <script>
+        if(getCookie("consent")) {
+            if(getCookie("darkmode") == "true") {
+                toggleDarkMode();
+                var darkmode = true;
+
+            }
+        }
+
+    </script>
+</body>
+</html>

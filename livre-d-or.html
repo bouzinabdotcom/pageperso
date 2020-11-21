@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style-default.css">
+    <script src="js/validate.min.js"></script>
+    <link rel="stylesheet" href="css/livre-d-or.css">
+    <title>Omar Bouzinab</title>
+</head>
+<body>
+    <header>
+        <h1><span>BOUZINAB</span> OMAR</h1>
+        <h4>Étudiant Ingenieur</h4>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html" >Acceuil</a></li>
+            <li><a href="#" class="active">Livre d'or</a></li>
+            <li><a href="cv.html">Curriculum Vitae</a></li>
+            <li><a href="liens.html">Liens</a></li>
+        </ul>
+    </nav>
+    <div class="main">
+        <form>
+            <label for="nom">Nom:</label>
+            <input type="text" name="nom" id="nom" onchange="validationNom(this.value);">
+            <small id="errormsg-nom" style="text-align: center; display: block; color: red;"></small>
+            <label for="datenai">Date de naissance:</label>
+            <input type="date" name="datenai" id="datenai">
+            <label for="mail">Adresse mail:</label>
+            <input type="email" name="mail" id="mail" onchange="validationEmail(this.value);">
+            <small id="errormsg-email" style="text-align: center; display: block; color: red;"></small>
+            <label for="commentaire">Commentaire:</label>
+            <textarea name="commentaire" id="commentaire" rows="5" cols="40"></textarea>
+            <small id="errormsg-comm" style="text-align: center; display: block; color: red;"></small>
+
+            <input type="submit" name="submit" id="submit">
+
+        </form>
+    </div>
+    <footer>© BOUZINAB Omar 2020</footer>
+
+
+    <div class="cookies-consent" id="cookie">
+        <p>We use cookies to improve user experience. By clicking “Accept Cookies”, you consent to store cookies on your device. 
+        <button onclick="handleCookieConsent()">Accept Cookies</button></p>
+        <script src="js/cookies.js"></script>
+    </div>
+
+    <button id="darkmode" onclick="toggleDarkMode()">Dark Mode</button>
+    <script src="js/darkmode.js"></script>
+
+    <script>
+        if(getCookie("consent")) {
+            if(getCookie("darkmode") == "true") {
+                toggleDarkMode();
+            }
+        }
+
+    </script>
+
+    <script>
+
+
+        function validationNom(value) {
+            let err = validate.single(value, {format: {pattern: "^[A-Za-z -]+", message:"Le nom ne doit pas contenir des nombres ou des caractères spéciaux!"}});
+            if(err) {
+                document.getElementById("errormsg-nom").innerHTML = err;
+                document.getElementById("nom").classList.add("error-input");
+            }else {
+                document.getElementById("errormsg-nom").innerHTML = "";
+                document.getElementById("nom").classList.remove("error-input");
+            }
+            
+        }
+
+        function validationEmail(value) {
+            var constraints = {
+                mail: {
+                    email: {
+                        message: "Format erroné! exemple: exemple@exemple.com"
+                    }
+                }
+            };
+            let err = validate({mail: value}, constraints);
+            if(err) {
+                document.getElementById("errormsg-email").innerHTML = err.mail;
+                document.getElementById("mail").classList.add("error-input");
+            }else {
+                document.getElementById("errormsg-email").innerHTML = "";
+                document.getElementById("mail").classList.remove("error-input");
+            }
+        }
+        
+
+    </script>
+</body>
+</html>

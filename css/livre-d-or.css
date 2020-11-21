@@ -1,0 +1,30 @@
+label, input, textarea {
+    display: block;
+}
+
+
+
+form > *{
+    width: 300px;
+    margin: 12px auto;  
+}
+
+form input, form textarea {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+form input {
+    height: 40px;
+}
+
+form #submit {
+    background-color: white;
+    width: 100px;
+}
+
+.error-input {
+    border-color: red;
+}
+

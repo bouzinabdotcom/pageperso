@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style-default.css">
+    <link rel="stylesheet" href="css/liens.css">
+    <title>Omar Bouzinab</title>
+</head>
+<body>
+    <header>
+        <h1><span>BOUZINAB</span> OMAR</h1>
+        <h4>Étudiant Ingenieur</h4>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Acceuil</a></li>
+            <li><a href="livre-d-or.html">Livre d'or</a></li>
+            <li><a href="cv.html">Curriculum Vitae</a></li>
+            <li><a href="#" class="active">Liens</a></li>
+        </ul>
+    </nav>
+    <div class="main">
+        <div class="int">
+            <h1>Liens Internes</h1>
+            <ul>
+                <li><span>Utilisation de JavaScript pour la partie vérification de formulaire, changement de feuille de style et gestion des cookies : </span><a href="pdf/rapport-js.pdf">rapport-js.pdf</a></li>
+                <li><span>Les différentes commandes Linux utilisées lors de l’initiation à Linux : </span><a href="pdf/rapport-linux.pdf">rapport-linux.pdf</a></li>
+            </ul>
+        </div>
+        <div class="ext">
+            <h1>Liens Externes</h1>
+            <ul>
+                <li><span>Github: </span><a href="https://github.com/bouzinabdotcom">@bouzinabdotcom</a></li>
+                <li><span>Linkedin: </span><a href="https://linkedin.com/in/bouzinab">Omar Bouzinab</a></li>
+                <li><span>Instagram: </span><a href="https://instagram.com/bouzinabdotcom">@bouzinabdotcom</a></li>
+                <li><span>Commentator: </span><a href="https://Commentator.bouzinab.com">Lien</a></li>
+            </ul>
+        </div>
+    </div>
+    <footer>© BOUZINAB Omar 2020</footer>
+   
+    <div class="cookies-consent" id="cookie">
+        <p>We use cookies to improve user experience. By clicking “Accept Cookies”, you consent to store cookies on your device. 
+        <button onclick="handleCookieConsent()">Accept Cookies</button></p>
+        <script src="js/cookies.js"></script>
+    </div>
+
+    <button id="darkmode" onclick="toggleDarkMode()">Dark Mode</button>
+    <script src="js/darkmode.js"></script>
+
+    <script>
+        if(getCookie("consent")) {
+            if(getCookie("darkmode") == "true") {
+                toggleDarkMode();
+            }
+        }
+
+    </script>
+</body>
+</html>
